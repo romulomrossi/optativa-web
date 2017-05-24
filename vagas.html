@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+      <title>Parallax Template - Materialize</title>
+      <!-- CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   </head>
+   <body>
+      <nav class="white" role="navigation">
+         <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">CompanyLogo</a>
+            <ul class="right hide-on-med-and-down">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="vagas.html">Vagas</a></li>
+               <li><a href="empresas.html">Empresas</a></li>
+               <li><a href="curriculos.html">Currículo</a></li>
+               <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="vagas.html">Vagas</a></li>
+               <li><a href="empresas.html">Empresas</a></li>
+               <li><a href="curriculos.html">Currículo</a></li>
+               <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+         </div>
+      </nav>
+      <nav>
+         <div class = "row teal">
+            <div class="nav-wrapper teal">
+               <div class="col s12">
+                  <a href="#!" class="breadcrumb">Home</a>
+                  <a href="#!" class="breadcrumb">Vagas Disponíveis</a>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div class="section">
+      <div class="section ">
+         <div class="row">
+            <div class="col s12 m10 l10 offset-l1 offset-m1">
+               <h5 class="breadcrumbs-title">Algumas vagas que estão abertas</h5>
+               <div class= "divider z-depth-2">
+               </div>
+            </div>
+            <div class="row center">
+               <div class="col m10 offset-m1">
+                  <script id="vagas-template" type="text/x-handlebars-template">
+                     {{#each vaga}}
+                      <div class="col m4 s12">
+                        <div class="card">
+                          <div class="card-image">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                          </div>
+                          <div class="card-content">
+                            <h5>{{vaga_titulo}}</h5>
+                            <p>{{vaga_descricao}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                     {{/each}}
+                  </script>
+                  <div class="row" id = "template">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer class="page-footer teal">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Filiais</h5>
+              <ul>
+                <li class="white-text">Chapecó</li>
+                <li class="white-text">Concórdia</li>
+                <li class="white-text">Pinhalzinho</li>
+              </ul>
+            </div>
+            <div class="col l6 s12">
+              <h5 class="white-text">Contato</h5>
+              <ul>
+                <li class="white-text">(49) 3322-2211</li>
+                <li class="white-text">(49) xxxx-xxxx</li>
+                <li class="white-text">(49) XXxx-XXxx</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          Developed by <a class="brown-text text-lighten-3" href="#">Rômulo Rossi</a>
+          </div>
+        </div>
+      </footer>
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/handlebars.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/vagas.js"></script>
+   </body>
+</html>
